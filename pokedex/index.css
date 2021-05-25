@@ -43,3 +43,9 @@ body {
   background-color: lightpink;
   grid-column: span 3;
 }
+
+.a-pokemon-lang {
+    background-color: aqua;
+    grid-column: span 4;
+}
+
