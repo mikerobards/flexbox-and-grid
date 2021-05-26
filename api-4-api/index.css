@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgreen;
+}
+
+.my-api {
+    display: grid;
+}
+
+.my-api-name {
+
+}
+
+.my-api-description {
+
+}
+
+.my-api-auth {
+
+}
+
+.my-api-https {
+    
+}
