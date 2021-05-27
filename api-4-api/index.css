@@ -6,20 +6,30 @@ html, body {
 
 .my-api {
     display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    grid-template-rows: 3rem, 1rem, 4rem, 3rem;
+    grid-gap: 1rem;
+    padding: .5rem;
 }
-/* 
-.my-api-name {
 
+.my-api-name {
+    font-size: 1.3rem;
+    border: .2rem solid black;
+    padding: .3rem;
+    text-align: center;
 }
 
 .my-api-description {
+    font-size: 1.3rem;
 
 }
 
 .my-api-auth {
+    font-size: 1.3rem;
 
 }
 
 .my-api-https {
+    font-size: 1.3rem;
 
-} */
+} 

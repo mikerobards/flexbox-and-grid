@@ -31,18 +31,32 @@ async function getAPIs() {
 function getAPIhtml(myAPI) {
     return `
     <div class="my-api-name">
-        ${myAPI.API}
+        <a href="${myAPI.Link}">
+            ${myAPI.API}
+            (${myAPI.Category})
+        </a>
+    
+        <div class="my-api-description">
+            ${myAPI.Description }
+        </div>
+        <div class="my-api-auth">
+            Auth: ${myAPI.Auth }
+        </div>
+        <div class="my-api-https">
+            HTTPS: ${myAPI.HTTPS }
+        </div>
     </div>
     `
 }
 
 function displayAPIs(myAPIs) {
+    
     document.body.innerHTML = `
     <div class="my-api">
         ${myAPIs.entries.map(api => getAPIhtml(api)).join('')}
     </div>
     `
-    console.log(myAPIs)
+    console.log(myAPIs.entries[0])
 }
 
 getAPIs()
@@ -50,4 +64,5 @@ getAPIs()
     .catch(e => console.log(`Error: ${e}`))
 
 
-    // ${myAPIs.map(api => getAPIhtml(api.API)).join('')}
+
+    // ${getAPIhtml(myAPIs.entries[0])}
