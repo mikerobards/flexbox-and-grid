@@ -8,28 +8,40 @@ html, body {
     display: grid;
     grid-template-columns: repeat(3, calc(100% / 3));
     grid-template-rows: 3rem, 1rem, 4rem, 3rem;
-    grid-gap: 1rem;
-    padding: .5rem;
+    background-color: lightblue;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+
 }
 
 .my-api-name {
+    grid-column: span 3;
     font-size: 1.3rem;
-    border: .2rem solid black;
     padding: .3rem;
     text-align: center;
+
 }
 
 .my-api-description {
-    font-size: 1.3rem;
-
+    grid-column: 1 / span 3;
+    grid-row-start: 3;
+    font-size: 1.1rem;
+    padding: 1rem;
+    text-align: center;
+    overflow-y: auto;
 }
 
 .my-api-auth {
     font-size: 1.3rem;
-
+    grid-row-start: 4;
+    grid-column: 1 / span 1;
+    text-align: center;
 }
 
 .my-api-https {
     font-size: 1.3rem;
-
+    grid-row-start: 4;
+    grid-column: 3 / span 1;
+    text-align: center;
 } 

@@ -30,32 +30,29 @@ async function getAPIs() {
 
 function getAPIhtml(myAPI) {
     return `
-    <div class="my-api-name">
-        <a href="${myAPI.Link}">
-            ${myAPI.API}
-            (${myAPI.Category})
-        </a>
-    
+    <div class="my-api">
+        <div class="my-api-name">
+            <a href="${myAPI.Link}" target="_blank">
+                ${myAPI.API}
+                (${myAPI.Category})
+            </a>
+        </div>
         <div class="my-api-description">
-            ${myAPI.Description }
+            ${myAPI.Description}
         </div>
         <div class="my-api-auth">
-            Auth: ${myAPI.Auth }
+            Auth: ${myAPI.Auth ? myAPI.Auth : "None"}
         </div>
         <div class="my-api-https">
-            HTTPS: ${myAPI.HTTPS }
+            HTTPS? ${myAPI.HTTPS}
         </div>
     </div>
     `
 }
 
 function displayAPIs(myAPIs) {
-    
-    document.body.innerHTML = `
-    <div class="my-api">
-        ${myAPIs.entries.map(api => getAPIhtml(api)).join('')}
-    </div>
-    `
+    document.body.innerHTML = myAPIs.entries.map(api => getAPIhtml(api)).join('')
+
     console.log(myAPIs.entries[0])
 }
 
